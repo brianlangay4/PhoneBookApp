@@ -86,3 +86,122 @@ Contact data is persisted using SQLite, ensuring that added contacts remain acce
 - Integration with cloud services for data synchronization.
 - Customizable contact icons.
 - Search functionality to quickly find contacts.
+
+
+
+
+### Add User page Guide and Explanation 
+
+
+![add user0](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/f7ba45d3-5201-4aaf-a162-c6ce4b2e6c71)
+![add user](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/9297cd67-40b6-4449-8b56-c2d139306e81)
+![preview](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/d3223dfe-c2f3-43d7-b793-0c7f21eea820)
+
+
+
+#### Adding Contacts page
+
+##### Add User Page
+
+Upon clicking the '+' button in the main activity, users are navigated to the "Add User" page, where they can input information for a new contact. The page is designed with simplicity and clarity in mind to facilitate a smooth user experience.
+
+**Layout Overview:**
+
+The "Add User" page features a clean and intuitive layout with input fields for essential contact details. Here's a breakdown of the layout components:
+
+1. **First Name and Last Name:**
+   - Two `EditText` fields for users to enter the first and last names of the contact.
+
+   ```xml
+   <EditText
+       android:id="@+id/editTextFirstName"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="First Name" />
+
+   <EditText
+       android:id="@+id/editTextLastName"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Last Name" />
+   ```
+
+2. **Email and Phone Number:**
+   - Additional `EditText` fields for the email and phone number of the contact.
+
+   ```xml
+   <EditText
+       android:id="@+id/editTextEmail"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Email" />
+
+   <EditText
+       android:id="@+id/editTextPhoneNumber"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Phone Number" />
+   ```
+
+3. **Gender Spinner:**
+   - A `Spinner` to select the gender of the contact (options: Male, Female).
+
+   ```xml
+   <Spinner
+       android:id="@+id/spinnerGender"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Select Gender" />
+   ```
+
+4. **Relationship Radio Buttons:**
+   - Three radio buttons for selecting the relationship status (options: Friend, Family, Work).
+
+   ```xml
+   <RadioGroup
+       android:id="@+id/radioGroupRelationship"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+       <RadioButton
+           android:id="@+id/radioButtonFriend"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Friend" />
+
+       <RadioButton
+           android:id="@+id/radioButtonFamily"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Family" />
+
+       <RadioButton
+           android:id="@+id/radioButtonWork"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Work" />
+   </RadioGroup>
+   ```
+
+5. **Save Button:**
+   - A button to save the entered information and add the new contact.
+
+   ```xml
+   <Button
+       android:id="@+id/buttonSave"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Save" />
+   ```
+
+**Functionality:**
+
+- Users are required to fill in the first name, last name, email, phone number, select gender, and choose a relationship status before saving.
+- The gender selection is made via the spinner, and the relationship status is chosen using radio buttons.
+- Clicking the "Save" button triggers the validation process, ensuring that all required fields are filled with valid information.
+- Once saved, the user is redirected back to the main activity, and the new contact is displayed in the contact list.
+
+This layout and functionality aim to provide a straightforward and user-friendly means of adding new contacts to the phone book. Users can easily input relevant details, promoting efficient contact management.
+
+
