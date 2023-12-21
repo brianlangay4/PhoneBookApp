@@ -30,6 +30,7 @@ public class ContactDetailActivity extends AppCompatActivity {
         TextView phoneNumberTextView = findViewById(R.id.phoneNumberTextView);
         TextView genderTextView = findViewById(R.id.genderTextView);
         TextView relationshipTextView = findViewById(R.id.relationshipTextView);
+        TextView initialsTextView = findViewById(R.id.contactIconTextView);
 
         // Get the contact object from the intent
         Contact contact = (Contact) getIntent().getSerializableExtra("contact");
@@ -42,6 +43,13 @@ public class ContactDetailActivity extends AppCompatActivity {
             genderTextView.setText(contact.getGender());
             relationshipTextView.setText(contact.getRelationship());
         }
+
+
+        // Set the first and last name initials as the icon
+        String initials = contact.getFirstName().substring(0, 1).toUpperCase() + contact.getLastName().substring(0, 1);
+        initialsTextView.setText(initials);
+
+
     }
     private void setTransparentStatusBar() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -49,12 +57,16 @@ public class ContactDetailActivity extends AppCompatActivity {
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.setStatusBarColor(Color.TRANSPARENT);
+
+            // Set the status bar icons to be dark
             View decorView = getWindow().getDecorView();
             int systemUiVisibilityFlags = decorView.getSystemUiVisibility();
             systemUiVisibilityFlags |= View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR; // This flag sets the status bar icons to be dark
             decorView.setSystemUiVisibility(systemUiVisibilityFlags);
         }
+
     }
     private void setTransparentNavigationBar() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

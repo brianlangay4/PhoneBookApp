@@ -75,6 +75,7 @@
         android:id="@+id/lastNameEditText"
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:inputType="textMultiLine"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/form_bc"
@@ -82,7 +83,9 @@
         android:hint="Last Name"
         android:layout_marginTop="8dp"/>
 
-    <EditText
+    <!--changed edittext to Auto complete -->
+
+    <MultiAutoCompleteTextView
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
         android:layout_height="55dp"
