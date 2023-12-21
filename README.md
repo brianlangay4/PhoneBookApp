@@ -93,11 +93,13 @@ Contact data is persisted using SQLite, ensuring that added contacts remain acce
 ### Add User page Guide and Explanation 
 
 
+#
 ![add user0](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/f7ba45d3-5201-4aaf-a162-c6ce4b2e6c71)
+
 ![add user](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/9297cd67-40b6-4449-8b56-c2d139306e81)
-![preview](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/d3223dfe-c2f3-43d7-b793-0c7f21eea820)
 
 
+#
 
 #### Adding Contacts page
 
