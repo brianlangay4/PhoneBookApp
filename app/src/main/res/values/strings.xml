@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">phone Book</string>
+
+    <string-array name="genders">
+        <!-- Add gender options as needed -->
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>
