@@ -9,7 +9,8 @@
 
 ## preview
 
-![phoneBookApp_sc](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/58382bb6-1222-49ed-b5b9-7796a4c22a93)
+
+![0 0 3](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/0669f8bf-1f12-4871-b2a0-82cbc5ad41da)
 
 
 ## Table of Contents
@@ -30,6 +31,7 @@
    - Data Persistence
 
 4. **Future Enhancements**
+   - Updates
 
 ## 1. Introduction
 
@@ -83,15 +85,97 @@ Contact data is persisted using SQLite, ensuring that added contacts remain acce
 
 ## 4. Future Enhancements
 
-- Integration with cloud services for data synchronization.
-- Customizable contact icons.
-- Search functionality to quickly find contacts.
+- Update 0.0.4
+
+
+## Whhats new on 0.0.4
+
+![Small GIF (400x819)](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/4c668760-987c-4fd4-9114-110ff79f6066)
+
+
+
+- layout update fixes and and final touches including added go button to navigate to main page
+- Auto complete to fit in Suggestion list of email domains after thhe user type @ in Email field 
+
+## Auto complete Logic in New Update 
+- added a class as hhelper class for indexing access to reach to @ wen user is typing and class is latter used 
+- with the given list of domains List<String> emailDomains; we can now add multiple domains to our list  emailDomains.add("gmail.com");
+        emailDomains.add("qq.com");
+        emailDomains.add("123.com");
+- now we use the list into  MultiAutoCompleteTextView that we ahve changed a regular EditText to this 
+- then we create array adapter like ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, emailDomains); to get the domains list and access default dropdown pannel from android resource to display the suggestions
+- finally we set thhe adapter to our autocomplete textview and setting the custom Tokenizer we created for indexing purpose
+
+
+- with custom Tokeniser logic Extended explanation  
+
+# CustomTokenizer Class 
+
+## Overview
+
+The `CustomTokenizer` class is a custom implementation of the `MultiAutoCompleteTextView.Tokenizer` interface in Android. It is specifically designed for auto-completion of email domains in a `MultiAutoCompleteTextView`. The tokenizer defines how tokens are identified, located, and terminated based on user input.
+
+## Key Methods
+
+### 1. `findTokenStart(CharSequence text, int cursor)`
+
+- **Purpose**: Finds the start position of a token.
+- **Parameters**:
+  - `text`: The input text in the `MultiAutoCompleteTextView`.
+  - `cursor`: The current cursor position.
+- **Return Value**: The start position of the token.
+
+### 2. `findTokenEnd(CharSequence text, int cursor)`
+
+- **Purpose**: Finds the end position of a token.
+- **Parameters**:
+  - `text`: The input text in the `MultiAutoCompleteTextView`.
+  - `cursor`: The current cursor position.
+- **Return Value**: The end position of the token.
+
+### 3. `terminateToken(CharSequence text)`
+
+- **Purpose**: Terminates a token.
+- **Parameters**:
+  - `text`: The input text representing the token.
+- **Return Value**: The terminated token.
+
+## Tokenization Logic
+
+1. **Finding the Start of the Token (`findTokenStart` method):**
+   - Starts from the cursor position and iterates backward to find the position of the '@' symbol, indicating the start of an email domain token.
+
+2. **Finding the End of the Token (`findTokenEnd` method):**
+   - Starts from the cursor position and iterates forward until a space or another '@' symbol is encountered, determining the end of the email domain token.
+
+3. **Terminating the Token (`terminateToken` method):**
+   - Determines whether the token needs termination based on the last character. If the last character is a space, the method trims it. If the last character is an '@', the original text is returned unmodified. If the text is an instance of `Spanned`, spans are copied to the new `SpannableString` to maintain formatting.
 
 
 
 
-### Add User page Guide and Explanation 
+## Notes
 
+- This tokenizer assumes that email domains are being entered after the '@' symbol.
+- The termination logic ensures that unnecessary spaces are trimmed, and the '@' symbol itself does not introduce a separator.
+
+## Summary 
+
+The `CustomTokenizer` class provides a flexible and customizable way to handle tokenization for email domains in a `MultiAutoCompleteTextView`. Its methods can be adapted for other tokenization scenarios based on specific requirements.
+
+
+To use the `CustomTokenizer` in a `MultiAutoCompleteTextView`, create an instance of the `CustomTokenizer` class and set it as the tokenizer for the `MultiAutoCompleteTextView`.
+
+- After adding the MultiAutoCompleteTextView in xml layout and have CustomTokenizer class
+
+
+## Usage
+
+// Example code on MultiAutoCompleteTextView usage 
+MultiAutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, emailDomains);
+autoCompleteTextView.setAdapter(adapter);
+autoCompleteTextView.setTokenizer(new CustomTokenizer());
 
 #
 ![add user0](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/f7ba45d3-5201-4aaf-a162-c6ce4b2e6c71)
