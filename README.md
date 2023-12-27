@@ -9,8 +9,7 @@
 
 ## preview
 
-
-![0 0 3](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/0669f8bf-1f12-4871-b2a0-82cbc5ad41da)
+![0 0 3](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/5ae59797-cc8c-427a-bd75-89456c6af880)
 
 
 ## Table of Contents
@@ -90,7 +89,8 @@ Contact data is persisted using SQLite, ensuring that added contacts remain acce
 
 ## Whhats new on 0.0.4
 
-![Small GIF (400x819)](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/4c668760-987c-4fd4-9114-110ff79f6066)
+![Uploading Large GIF (640x1310).gif…]()
+
 
 
 
@@ -177,13 +177,7 @@ ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_
 autoCompleteTextView.setAdapter(adapter);
 autoCompleteTextView.setTokenizer(new CustomTokenizer());
 
-#
-![add user0](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/f7ba45d3-5201-4aaf-a162-c6ce4b2e6c71)
 
-![add user](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/9297cd67-40b6-4449-8b56-c2d139306e81)
-
-
-#
 
 #### Adding Contacts page
 
