@@ -176,13 +176,13 @@ To use the `CustomTokenizer` in a `MultiAutoCompleteTextView`, create an instanc
 
 
 ## Usage
-
+```
 // Example code on MultiAutoCompleteTextView usage 
 MultiAutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
 ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, emailDomains);
 autoCompleteTextView.setAdapter(adapter);
 autoCompleteTextView.setTokenizer(new CustomTokenizer());
-
+```
 
 
 
