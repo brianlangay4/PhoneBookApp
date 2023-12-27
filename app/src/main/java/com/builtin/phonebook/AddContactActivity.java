@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
@@ -60,6 +61,16 @@ public class AddContactActivity extends AppCompatActivity {
         final RadioButton familyRadioButton = findViewById(R.id.familyRadioButton);
         final RadioButton workRadioButton = findViewById(R.id.workRadioButton);
         Button saveButton = findViewById(R.id.saveButton);
+        ImageView next = findViewById(R.id.next);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddContactActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
 

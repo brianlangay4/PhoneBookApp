@@ -1,15 +1,20 @@
 package com.builtin.phonebook;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ContactDetailActivity extends AppCompatActivity {
+
+
+    ImageView next;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,13 +29,24 @@ public class ContactDetailActivity extends AppCompatActivity {
 
 
         //code starts here
-
+        ImageView next = findViewById(R.id.next);
         TextView fullNameTextView = findViewById(R.id.fullNameTextView);
         TextView emailTextView = findViewById(R.id.emailTextView);
         TextView phoneNumberTextView = findViewById(R.id.phoneNumberTextView);
         TextView genderTextView = findViewById(R.id.genderTextView);
         TextView relationshipTextView = findViewById(R.id.relationshipTextView);
         TextView initialsTextView = findViewById(R.id.contactIconTextView);
+
+
+        //new
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ContactDetailActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         // Get the contact object from the intent
         Contact contact = (Contact) getIntent().getSerializableExtra("contact");

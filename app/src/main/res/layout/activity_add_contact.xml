@@ -43,6 +43,7 @@
             </LinearLayout>
 
             <ImageButton
+                android:id="@+id/next"
                 android:layout_width="18dp"
                 android:layout_height="17dp"
                 android:layout_gravity="end"
