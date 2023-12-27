@@ -92,12 +92,7 @@ Contact data is persisted using SQLite, ensuring that added contacts remain acce
 
 
 
-## Whhats new on 0.0.4
-
-
-![Large GIF (640x1310)](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/dbf2704d-e273-44c3-9cf9-cd45231e3fde)
-
-
+## Whats new on 0.0.4
 
 
 - layout update fixes and and final touches including added go button to navigate to main page
