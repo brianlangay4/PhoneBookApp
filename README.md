@@ -8,10 +8,7 @@
 ##
 
 ## preview
-
-
-![Large GIF (640x1310)](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/f34dac1e-56d9-44db-945d-e2b374427162)
-
+![0 0 3](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/314ac8b2-a111-4fe1-b0a5-7344cd44ed30)
 
 
 
@@ -90,9 +87,15 @@ Contact data is persisted using SQLite, ensuring that added contacts remain acce
 - Update 0.0.4
 
 
+![Large GIF (640x1310)](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/f34dac1e-56d9-44db-945d-e2b374427162)
+
+
+
+
 ## Whhats new on 0.0.4
 
-![Uploading Large GIF (640x1310).gif…]()
+
+![Large GIF (640x1310)](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/dbf2704d-e273-44c3-9cf9-cd45231e3fde)
 
 
 
