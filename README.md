@@ -9,7 +9,10 @@
 
 ## preview
 
-![0 0 3](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/5ae59797-cc8c-427a-bd75-89456c6af880)
+
+![Large GIF (640x1310)](https://github.com/brianlangay4/PhoneBookApp/assets/67788456/f34dac1e-56d9-44db-945d-e2b374427162)
+
+
 
 
 ## Table of Contents
@@ -176,6 +179,7 @@ MultiAutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteT
 ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, emailDomains);
 autoCompleteTextView.setAdapter(adapter);
 autoCompleteTextView.setTokenizer(new CustomTokenizer());
+
 
 
 
